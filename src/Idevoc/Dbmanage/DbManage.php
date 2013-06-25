@@ -105,13 +105,13 @@ class DbManage extends Compress
 
 	}
 
-	/**
-	* Convert Object to Array
-	* 
-	* @param obj $obj
-	*/
+    /**
+     * Convert Object to Array
+     * 
+     * @param obj $obj
+    */
 
-	public static function objectToArray($obj) {
+    public static function objectToArray($obj) {
         if(!is_array($obj) && !is_object($obj)) return $obj;
 		if(is_object($obj)) $obj = get_object_vars($obj);
         return array_map('self::'.__FUNCTION__, $obj);
