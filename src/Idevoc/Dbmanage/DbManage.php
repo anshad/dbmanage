@@ -52,8 +52,8 @@ class DbManage extends Compress
 			$return.= 'DROP TABLE IF EXISTS '.$table.';';
 			$table_create = DB::selectOne('SHOW CREATE TABLE '.$table.'');
 			$table_create = get_object_vars($table_create);
-            $table_create = (array)$table_create;
-            $table_create = array_values($table_create);
+                        $table_create = (array)$table_create;
+                        $table_create = array_values($table_create);
 			$return.= "\n\n".$table_create[1].";\n\n";
 
 			$array = array_dot($rows_array);
@@ -86,11 +86,11 @@ class DbManage extends Compress
 			$return.="\n\n\n";
 		}
 
-       $return.="SET foreign_key_checks = 1;";
-       $return.="\n\n\n";
+           $return.="SET foreign_key_checks = 1;";
+           $return.="\n\n\n";
 
-       $fileName = 'backup_'.$database.'_'.date('d.m.Y_H.i.s.A',time()).'.sql'; 
-       $from     = $path.$fileName;
+           $fileName = 'backup_'.$database.'_'.date('d.m.Y_H.i.s.A',time()).'.sql'; 
+           $from     = $path.$fileName;
 	   $to       = $path.$fileName.'.gz';
 	   $handle   = fopen($from,'w+');
 	   fwrite($handle,$return); // create .sql file
