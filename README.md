@@ -19,9 +19,35 @@ The DBManage Service Provider can be installed via Composer by requiring the ide
     }
       
    
-Update your packages with composer update or install with composer install.
+Next, Update your packages with:
 
+    composer update 
+    
+Or Install with:
 
+    composer install 
+    
+Next, add the service provider to app/config/app.php, within the providers array.
+
+    'providers' => array(
+         //--
+        'Idevoc\Dbmanage\DbmanageServiceProvider',
+    )
+    
+Next, create alias in app/config/app.php, within the aliases array.
+
+    'aliases' => array(
+         //--
+        'DbManage'   => 'Idevoc\Dbmanage\DbManage',
+    )   
+    
+Finally, call the function.
+
+NB: before calling function, you need to set database configurations.
+ 
+Add your backup path in app/config/app.php or just pass it directly.
+
+    return DbManage::backupDatabase(Config::get('app.backup_path')); 
 
 
 
