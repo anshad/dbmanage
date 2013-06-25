@@ -37,10 +37,10 @@ class DbManage extends Compress
 		}
 
 		foreach($tables as $table){
-			$fields     = $schema->listTableColumns($table);
-			$num_fields = count($fields);
-			$rows       = DB::select('SELECT * FROM '.$table.'');
-			$rows       = self::objectToArray($rows);
+		    $fields     = $schema->listTableColumns($table);
+		    $num_fields = count($fields);
+		    $rows       = DB::select('SELECT * FROM '.$table.'');
+		    $rows       = self::objectToArray($rows);
 		    $count      = count($rows);
 		    $rows_array = array();
 
