@@ -27,7 +27,12 @@ Or Install with:
 
     composer install 
     
-Next, add the service provider to app/config/app.php, within the providers array.
+    
+Usage
+-------
+    
+    
+Add the service provider to app/config/app.php, within the providers array.
 
     'providers' => array(
          //--
