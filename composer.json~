@@ -1,0 +1,23 @@
+{
+    "name": "idevoc/dbmanage",
+    "description": "",
+    "authors": [
+        {
+            "name": "Anshad",
+            "email": "anshad@idevoc.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.x"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Idevoc\\Dbmanage": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
