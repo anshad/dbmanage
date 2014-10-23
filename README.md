@@ -1,7 +1,9 @@
 dbmanage
 ========
 
-Database Backup Management Package for Laravel 4
+Database Backup Management Package for Laravel 4.
+
+Backup database or tables in compressed format.
 
 
 Installation
