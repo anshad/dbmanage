@@ -9,11 +9,14 @@ Installation
 
 The DBManage Service Provider can be installed via Composer by requiring the idevoc/dbmanage package in your laravel project's composer.json.
 
+Note : The dbmanage depends on doctrine/dbal
+
 
 
     {
        "require": {
           "laravel/framework": "4.2.*",
+          "doctrine/dbal": "2.5.*@dev",
           "idevoc/dbmanage": "dev-master"
        }
     }
@@ -52,7 +55,10 @@ Note: before calling function, you need to set database configurations.
  
 Add your backup path in app/config/app.php or just pass it directly.
 
-    return DbManage::backupDatabase(); 
+    return DbManage::backupDatabase(); // backup full db to app/database
+    return DbManage::backupDatabase(app_path().'/'); // backup to app path (you can define any path)
+    return DbManage::backupDatabase(NULL, 'users,pages'); // backup only users and pages table to default path
+
 
 
 
