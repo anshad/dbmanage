@@ -20,7 +20,7 @@ class DbManage extends Compress
 	* @param string $path, string $tables(comma seperated)
 	*/
 
- 	public static function backupDatabase( $path, $tables = '*' )
+ 	public static function backupDatabase( $path = __DIR__, $tables = '*' )
 	{
 		$database     = DB::getDatabaseName();
 		$schema       = DB::getDoctrineSchemaManager();
