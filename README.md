@@ -13,7 +13,7 @@ The DBManage Service Provider can be installed via Composer by requiring the ide
 
     {
        "require": {
-          "laravel/framework": "4.1.*",
+          "laravel/framework": "4.2.*",
           "idevoc/dbmanage": "dev-master"
        }
     }
@@ -48,11 +48,11 @@ Next, create alias in app/config/app.php, within the aliases array.
     
 Finally, call the function.
 
-NB: before calling function, you need to set database configurations.
+Note: before calling function, you need to set database configurations.
  
 Add your backup path in app/config/app.php or just pass it directly.
 
-    return DbManage::backupDatabase(Config::get('app.backup_path')); 
+    return DbManage::backupDatabase(); 
 
 
 
